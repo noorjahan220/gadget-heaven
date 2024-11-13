@@ -5,7 +5,7 @@ const NavBar = () => {
 
 
     const location = useLocation();
-    const isHomepage = location.pathname === "/";
+    const isHomepage = location.pathname === "/" || location.pathname.includes('category');
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
 

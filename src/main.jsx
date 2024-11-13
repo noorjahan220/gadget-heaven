@@ -11,24 +11,38 @@ import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Home from './Components/Home/Home';
 import DashBoard from './Components/DashBoard/DashBoard';
 import Statistics from './Components/Statistics/statistics';
+import ProductCards from './Components/ProductCards/ProductCards';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement : <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
-        element:<Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('../categories.json'),
+        children: [
+          {
+            path: '/',
+            element: <ProductCards />,
+            loader: () => fetch('../ProductsData.json'),
+          },
+          {
+            path: 'category/:category',
+            element: <ProductCards />,
+            loader: () => fetch('../ProductsData.json'),
+          }
+        ],
       },
       {
         path: "dashboard",
-        element:<DashBoard></DashBoard>
+        element: <DashBoard></DashBoard>
       },
       {
         path: "statistics",
-        element:<Statistics></Statistics>
+        element: <Statistics></Statistics>
       }
     ]
   },
@@ -36,6 +50,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )

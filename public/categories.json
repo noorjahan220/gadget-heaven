@@ -1,19 +1,19 @@
 [
     {
       "category_id": "C1",
-      "category_name": "Laptops"
+      "category": "Laptops"
     },
     {
       "category_id": "C2",
-      "category_name": "Tablets"
+      "category": "Tablets"
     },
     {
       "category_id": "C3",
-      "category_name": "Smartwatches"
+      "category": "Smartwatches"
     },
     {
       "category_id": "C4",
-      "category_name": "Phones"
+      "category": "Phones"
     }
   ]
   

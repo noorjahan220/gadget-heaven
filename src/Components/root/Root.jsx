@@ -7,7 +7,11 @@ const Root = () => {
     return (
         <div className="max-w-[90%] mx-auto sora-font">
           <NavBar></NavBar>  
-          <div className="min-h-[calc(100vh-332px)]"><Outlet></Outlet></div>
+          <div className="min-h-[calc(100vh-332px)]">
+            <Outlet>
+
+            </Outlet>
+            </div>
           <Footer></Footer>
         </div>
     );

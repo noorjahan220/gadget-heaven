@@ -28,14 +28,17 @@ const Footer = () => {
   </nav>
 </footer> */}
 
-      <footer className="footer grid grid-cols-1  md:grid-cols-2   items-center    rounded p-10">
-        <div className="md:text-left mb-6 md:mb-0">
+     
+     <footer className=" rounded p-10">
+
+        <div className=" mb-6 text-center ">
           <h1 className="font-bold text-xl">Gadget Heaven</h1>
           <p>Loading the way in cutting-edge technology and innovation</p>
 
         </div>
+        <hr className="my-8 border-blue-gray-50" />
     
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 text-center">
           <nav className="grid grid-cols-1">
             <h6 className="footer-title">Services</h6>
             <a className="link link-hover">Branding</a>
@@ -60,6 +63,7 @@ const Footer = () => {
         </div>
 
       </footer>
+     
 
 
 
