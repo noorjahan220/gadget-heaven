@@ -8,13 +8,13 @@ const Home = () => {
     const categories = useLoaderData();
 
     return (
-        <div>
+        <div className="bg-backGround">
             <Banner />
-            <div className="grid grid-cols-1 lg:grid-cols-4 ">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-2  ">
                 <div>
                     <Categories categories={categories} />
                 </div>
-                <div className="col-span-3">
+                <div className="col-span-4">
                     <Outlet />
 
 

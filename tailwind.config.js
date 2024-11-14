@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       colors:{
-        bannerColor : 'rgba(149, 56, 226, 1)'
+        bannerColor : 'rgba(149, 56, 226, 1)',
+        btnColor : 'rgba(149, 56, 226, 1)',
+        backGround : 'rgba(9, 8, 15, 0.05)',
       }
     },
   },
