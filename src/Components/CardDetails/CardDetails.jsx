@@ -28,7 +28,7 @@ const CardDetails = () => {
                 <div className=" flex flex-col lg:flex-row p-6">
                     <img
                         src={detail.product_image}
-                        className="w-[40%] object-cover rounded-lg shadow-2xl mr-8 ml-10 mt-5 mb-5" />
+                        className="w-[50%] object-cover rounded-lg shadow-2xl mr-8 ml-10 mt-5 mb-5" />
                     <div className="ml-8  mt-5 mb-5">
                         <h1 className="text-3xl font-semibold mb-1">{detail.product_title}</h1>
                         <p className="text-xl font-semibold mb-1">
