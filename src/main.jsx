@@ -12,6 +12,7 @@ import Home from './Components/Home/Home';
 import DashBoard from './Components/DashBoard/DashBoard';
 import Statistics from './Components/Statistics/statistics';
 import ProductCards from './Components/ProductCards/ProductCards';
+import CardDetails from './Components/CardDetails/CardDetails';
 
 const router = createBrowserRouter([
   {
@@ -38,11 +39,16 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <DashBoard></DashBoard>
+        element: <DashBoard/>
       },
       {
         path: "statistics",
-        element: <Statistics></Statistics>
+        element: <Statistics/>
+      },
+      {
+        path: "/card/:product_id",
+        element: <CardDetails/>,
+        loader: () => fetch('../ProductsData.json')
       }
     ]
   },

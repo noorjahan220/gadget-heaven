@@ -1,9 +1,9 @@
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Card = ({ card }) => {
-  const { product_title, product_image, price } = card || {};
+  const { product_title, product_image, price, product_id } = card || {};
   return (
     <>
       <div className="card  w-full" style={{
@@ -19,9 +19,13 @@ const Card = ({ card }) => {
           <h2 className="card-title text-xl font-semibold">{product_title}</h2>
           <p className="text-xs font-normal">{price}</p>
           <div className="card-actions text-xs font-semibold">
-            <Link className="py-2 px-4 rounded-[32px]" style={{
+
+            <NavLink 
+            to={`/card/${product_id}`} 
+            className="py-2 px-4 rounded-[32px]" 
+            style={{
               border: '1px solid rgba(149, 56, 226, 1)'
-            }}>View Details</Link>
+            }}>View Details</NavLink>
           </div>
         </div>
       </div>
