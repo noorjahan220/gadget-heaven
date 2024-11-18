@@ -1,18 +1,38 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLoaderData, useParams } from "react-router-dom";
+import { addCart, addFavorite, getAllFavorites } from "../../utils";
 
 
 
 const CardDetails = () => {
     const { product_id } = useParams()
     const allCardsData = useLoaderData()
-
+    
     const [detail, setDetail] = useState({})
+    const [isFavorite, setIsFavorite] = useState(false)
     useEffect(() => {
         const singleData = allCardsData.find(item => item.product_id == product_id)
+        const favorites = getAllFavorites()
+        const isExist = favorites.find(item => item.id == detail.id)
+        if(isExist){
+           setIsFavorite(true) 
+        }
         setDetail(singleData)
-        console.log(singleData)
+        
     }, [])
+
+//    handleFavorite
+
+const handleFavorite = detail =>{
+    addFavorite(detail);
+    setIsFavorite(true) 
+}
+
+const handleCart = detail =>{
+    addCart(detail);
+}
+
+
     return (
         <div>
 
@@ -65,7 +85,7 @@ const CardDetails = () => {
                        </div>
                         
                         <div className="flex  items-center">
-                            <NavLink className="py-2 px-4 rounded-[32px] text-[18px] flex items-center gap-1 font-bold" style={{
+                            <NavLink onClick={() => handleCart(detail)}   className="py-2 px-4 rounded-[32px] text-[18px] flex items-center gap-1 font-bold" style={{
                                 backgroundColor: 'rgba(149, 56, 226, 1)',color:'white'
                             }}> <div>Add To Cart 
                                 </div>     <div className="indicator">
@@ -88,7 +108,8 @@ const CardDetails = () => {
                             </div>
 
                             </NavLink>
-                            <NavLink className="btn">
+                            <NavLink disabled = {isFavorite}
+                             onClick={() => handleFavorite(detail)} className="btn">
                                 <div className="indicator">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
