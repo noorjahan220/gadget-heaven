@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, useLoaderData, useParams } from "react-router-dom";
+import {  useLoaderData, useParams } from "react-router-dom";
 import { addCart, addFavorite, getAllFavorites } from "../../utils";
 
 
@@ -13,15 +13,15 @@ const CardDetails = () => {
     useEffect(() => {
         const singleData = allCardsData.find(item => item.product_id == product_id)
         const favorites = getAllFavorites()
-        const isExist = favorites.find(item => item.id == detail.id)
+        const isExist = favorites.find(item => item.product_id == product_id)
         if(isExist){
            setIsFavorite(true) 
         }
         setDetail(singleData)
         
-    }, [])
+    }, [product_id, allCardsData])
 
-//    handleFavorite
+
 
 const handleFavorite = detail =>{
     addFavorite(detail);
@@ -29,6 +29,7 @@ const handleFavorite = detail =>{
 }
 
 const handleCart = detail =>{
+   
     addCart(detail);
 }
 
@@ -85,7 +86,7 @@ const handleCart = detail =>{
                        </div>
                         
                         <div className="flex  items-center">
-                            <NavLink onClick={() => handleCart(detail)}   className="py-2 px-4 rounded-[32px] text-[18px] flex items-center gap-1 font-bold" style={{
+                            <button onClick={() => handleCart(detail)}   className="py-2 px-4 rounded-[32px] text-[18px] flex items-center gap-1 font-bold" style={{
                                 backgroundColor: 'rgba(149, 56, 226, 1)',color:'white'
                             }}> <div>Add To Cart 
                                 </div>     <div className="indicator">
@@ -107,8 +108,8 @@ const handleCart = detail =>{
 
                             </div>
 
-                            </NavLink>
-                            <NavLink disabled = {isFavorite}
+                            </button>
+                            <button disabled = {isFavorite}
                              onClick={() => handleFavorite(detail)} className="btn">
                                 <div className="indicator">
                                     <svg
@@ -126,7 +127,7 @@ const handleCart = detail =>{
                                         />
                                     </svg>
                                 </div>
-                            </NavLink>
+                            </button>
                         </div>
                     </div>
                 </div>

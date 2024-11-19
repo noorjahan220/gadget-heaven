@@ -3,12 +3,16 @@ import { NavLink } from 'react-router-dom';
 
 
 const Card = ({ card }) => {
+
+
   const { product_title, product_image, price, product_id } = card || {};
+
   return (
     <>
       <div className="card  w-full" style={{
         border: '1px solid black'
       }}>
+        
         <figure className="px-5 pt-5 ">
           <img
             src={product_image}
@@ -29,7 +33,7 @@ const Card = ({ card }) => {
           </div>
         </div>
       </div>
-
+            
     </>
   );
 };
