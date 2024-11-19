@@ -13,6 +13,7 @@ import DashBoard from './Components/DashBoard/DashBoard';
 import Statistics from './Components/Statistics/statistics';
 import ProductCards from './Components/ProductCards/ProductCards';
 import CardDetails from './Components/CardDetails/CardDetails';
+import Cart from './Components/Cart/Cart';
 
 const router = createBrowserRouter([
   {
@@ -51,7 +52,11 @@ const router = createBrowserRouter([
         path: "/card/:product_id",
         element: <CardDetails/>,
         loader: () => fetch('../ProductsData.json')
-      }
+      },
+     
+     
+      
+
     ]
   },
 ]);

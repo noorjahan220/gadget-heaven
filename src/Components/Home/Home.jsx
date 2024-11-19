@@ -1,12 +1,12 @@
 
-import { Outlet, useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData, useNavigate } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Categories from "../Categories/Categories";
 
 
 const Home = () => {
     const categories = useLoaderData();
-
+const navigate = useNavigate()
     return (
         <div className="bg-backGround">
             <Banner />

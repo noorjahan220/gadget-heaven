@@ -40,7 +40,7 @@ const DashBoard = () => {
 
 
                 <div className="flex justify-center gap-2">
-                    <button onClick={() => handleActiveState("cart")} className={`${isActive.cart ? " py-2 px-4 w-[103px] rounded-[32px] text-xs font-bold active" : "py-2 px-4 rounded-[32px] text-xs font-bold bg-bannerColor text-white border border-white w-[103px]"}`}>Cart</button>
+                    <button  onClick={() => handleActiveState("cart")} className={`${isActive.cart ? " py-2 px-4 w-[103px] rounded-[32px] text-xs font-bold active" : "py-2 px-4 rounded-[32px] text-xs font-bold bg-bannerColor text-white border border-white w-[103px]"}`}>Cart</button>
 
                     <button onClick={() => handleActiveState("wishlist")} className={`${isActive.cart ? "py-2 px-4 rounded-[32px] text-xs font-bold bg-bannerColor text-white border border-white w-[103px]" : "active py-2 px-4 rounded-[32px] text-xs font-bold w-[103px]"}`}>Wishlist</button>
                 </div>

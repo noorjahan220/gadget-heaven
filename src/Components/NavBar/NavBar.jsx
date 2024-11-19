@@ -1,8 +1,9 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import './navBar.css'
 
 const NavBar = () => {
 
+const navigate = useNavigate();
 
     const location = useLocation();
     const isHomepage = location.pathname === "/" || location.pathname.includes('category');
@@ -46,8 +47,8 @@ const NavBar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                <div className="navbar-end" >
+                    <div onClick={()=>navigate('/DashBoard')} tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                         <div className="indicator">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +66,7 @@ const NavBar = () => {
                         </div>
 
                     </div>
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                    <div  tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                         <div className="indicator">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
