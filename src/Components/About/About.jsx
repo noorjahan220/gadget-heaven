@@ -17,7 +17,7 @@ const About = () => {
                 <div className="hero bg-gray-50 w-[80%] mx-auto " style={{ border: '10px solid rgba(255, 255, 255, 0.5)', borderRadius: '10px', display: 'block', position: 'relative', top: '-130px' }}>
                     <div className="hero-content flex-col lg:flex-row-reverse ">
                         <img className="w-[50%] "
-                            src="/src/assets/about.jpeg" />
+                            src="https://i.ibb.co.com/wLKVqRc/about.jpg" />
                         <div>
                             <h1 className="text-3xl font-bold">Shaping Tech’s Future</h1>
                             <p className="py-6 text-xs font-medium">
