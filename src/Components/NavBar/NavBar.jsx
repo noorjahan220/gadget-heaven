@@ -18,7 +18,7 @@ const navigate = useNavigate();
 
     return (
         <nav className={`navbar ${isHomepage ? "homepage" : ""}`}>
-            <div className="navbar">
+            <div className="navbar justify-center">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,15 +41,15 @@ const navigate = useNavigate();
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+                    <a className="btn btn-ghost lg:text-[1rem] ">Gadget Heaven</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end" >
-                    <div onClick={()=>navigate('/DashBoard')} tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                <div className="navbar-end lg:gap-2" >
+                    <div onClick={()=>navigate('/DashBoard')} tabIndex={0} role="button" className=" ">
                         <div className="indicator">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const navigate = useNavigate();
                         </div>
 
                     </div>
-                    <div  tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                    <div  tabIndex={0} role="button" className="  ">
                         <div className="indicator">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

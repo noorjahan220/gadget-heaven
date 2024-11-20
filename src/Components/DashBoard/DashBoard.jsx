@@ -34,7 +34,7 @@ const DashBoard = () => {
 
 
         <div className="bg-backGround">
-            <div className="text-center bg-bannerColor  p-20 mb-10 text-white">
+            <div className="text-center bg-bannerColor  p-10 mb-10 text-white">
                 <h1 className="font-bold text-3xl mb-2">DashBoard</h1>
                 <p className="font-normal text-sm mb-2">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
 

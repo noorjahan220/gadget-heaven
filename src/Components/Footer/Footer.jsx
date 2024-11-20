@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <hr className="my-8 border-blue-gray-50" />
     
-        <div className="grid grid-cols-3 text-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 text-center">
           <nav className="grid grid-cols-1">
             <h6 className="footer-title">Services</h6>
             <a className="link link-hover">Branding</a>

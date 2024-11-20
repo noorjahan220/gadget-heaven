@@ -37,7 +37,7 @@ const handleCart = detail =>{
     return (
         <div>
 
-            <div className="text-center bg-bannerColor p-28  mb-10 text-white">
+            <div className="text-center bg-bannerColor pb-28 pt-10 mb-10 text-white">
                 <h1 className="font-bold text-3xl mb-2">Product Details</h1>
                 <p className="font-normal text-sm mb-2">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
 
@@ -46,13 +46,13 @@ const handleCart = detail =>{
             <div className="hero bg-base-200 rounded-[32px] " style={{
                      width: '80%', display: 'block', margin: '0 auto', position: 'relative', top: '-170px'
                 }}>
-                <div className=" flex flex-col lg:flex-row p-6">
+                <div className=" flex flex-col justify-center lg:flex-row lg:p-6">
                     <img
                         src={detail.product_image}
-                        className="w-[50%] object-cover rounded-lg shadow-2xl mr-8 ml-10 mt-5 mb-5" />
-                    <div className="ml-8  mt-5 mb-5">
-                        <h1 className="text-3xl font-semibold mb-1">{detail.product_title}</h1>
-                        <p className="text-xl font-semibold mb-1">
+                        className="lg:w-[50%] w-[70%] object-cover rounded-lg shadow-2xl lg:mr-8 lg:ml-10 mt-5 mb-5 mx-auto" />
+                    <div className="m-8">
+                        <h1 className="lg:text-3xl text-xl font-semibold mb-1">{detail.product_title}</h1>
+                        <p className="lg:text-xl text-xs font-semibold mb-1">
                             Price: {detail.price}
                         </p>
                         <button className="py-1 px-2 rounded-[32px] text-xs font-normal mb-1"
@@ -85,11 +85,12 @@ const handleCart = detail =>{
                         <div><p className="ml-2 mb-1 ">{detail.rating}</p></div>
                        </div>
                         
-                        <div className="flex  items-center">
-                            <button onClick={() => handleCart(detail)}   className="py-2 px-4 rounded-[32px] text-[18px] flex items-center gap-1 font-bold" style={{
+                        <div className="lg:flex  items-center">
+                            <button onClick={() => handleCart(detail)}   className="py-2 px-4 rounded-[32px] text-[18px] flex items-center gap-1 font-bold " style={{
                                 backgroundColor: 'rgba(149, 56, 226, 1)',color:'white'
                             }}> <div>Add To Cart 
-                                </div>     <div className="indicator">
+                                </div>     
+                                <div className="indicator">
 
 
 

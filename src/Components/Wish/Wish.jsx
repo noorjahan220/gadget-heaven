@@ -23,7 +23,7 @@ const Wish = () => {
 
 
     return (
-      <div className="grid grid-cols-1 gap-2 ">
+      <div className="m-4 p-6 ">
             {
                 card.map(card => (<CartCard key={card.product_id} card={card} handleClick={handleRemovedWish} />))
             }

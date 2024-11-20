@@ -9,9 +9,10 @@ body {
   [class*=" number-slide"] {
    
    height: 380px;
- 
+   
     max-height: 100vh;
   }
+  
   
  
   
