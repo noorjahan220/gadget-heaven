@@ -12,6 +12,7 @@ const navigate = useNavigate();
 
         <li><NavLink to="statistics">Statistics</NavLink></li>
         <li><NavLink to="dashboard">Dashboard</NavLink></li>
+        <li><NavLink to="about">About Us</NavLink></li>
 
     </>
 

@@ -13,7 +13,7 @@ import DashBoard from './Components/DashBoard/DashBoard';
 import Statistics from './Components/Statistics/statistics';
 import ProductCards from './Components/ProductCards/ProductCards';
 import CardDetails from './Components/CardDetails/CardDetails';
-import Cart from './Components/Cart/Cart';
+import About from './Components/About/About';
 
 const router = createBrowserRouter([
   {
@@ -46,7 +46,12 @@ const router = createBrowserRouter([
       {
         path: "statistics",
         element: <Statistics/>,
-        loader: () => fetch('../ProductsData.json')
+       
+      },
+      {
+        path: "about",
+        element: <About/>,
+       
       },
       {
         path: "/card/:product_id",
