@@ -1,4 +1,4 @@
-# Project Name
+# Gadget Heaven
 
 Check out the live version of the project here: [Live Demo](assignment8-1234.surge.sh)
 
