@@ -3,12 +3,7 @@
 ## 📌 Overview  
 Gadget Heaven is a React-based e-commerce platform that offers a seamless shopping experience for gadget enthusiasts. It features product browsing, shopping cart functionality, and wishlist management while utilizing **React Local Storage** for data persistence.  
 
-## 🌐 Live Demo  
-🔗 **[Live Project](http://assignment8-1234.surge.sh)**  
 
-![Gadget Heaven Screenshot](https://via.placeholder.com/800x400?text=Project+Screenshot)  
-
----
 
 ## 🛠 Technologies Used  
 - **Frontend**: React.js, JSX, React Router, CSS  
